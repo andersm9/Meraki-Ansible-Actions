@@ -1,0 +1,16 @@
+VPNNAME: MXtoAWS
+PINGIP: 172.31.26.184
+comment1: "Allow HTTPS Traffic"
+policy1: allow
+protocol1: tcp
+destPort1: 443
+destCidr1: Any
+srcPort1: Any
+srcCidr1: Any
+syslogEnabled1: false
+comment2: "Allow ICMP Traffic"
+policy2: allow
+protocol2: icmp
+destCidr2: Any
+srcCidr2: Any
+syslogEnabled2: false
