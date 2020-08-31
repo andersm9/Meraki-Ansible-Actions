@@ -33,3 +33,20 @@
 
     - debug:
         msg: "{{ VPNNAME }}"
+
+    - name: GET Appliance Subnets
+      uri:
+        url: https://api.meraki.com/api/v1/devices/Q2NY-UYYZ-XVLK/appliance/dhcp/subnets
+        method: GET
+        headers:
+          Content-Type: application/json
+          Accept: application/json
+          X-Cisco-Meraki-API-Key: "{{ auth }}"
+        return_content: true
+        follow_redirects: all
+        validate_certs: true
+      register: meraki_subnets
+
+# AWS part
+    - ec2_vpc_net_info:
+      register: vpc_ids
