@@ -31,4 +31,4 @@
       register: meraki_uplink
 
     - debug:
-        msg: "{{ meraki_uplink }}"
+        msg: "{{ VPNNAME }}"
