@@ -12,4 +12,4 @@
         #name: devices
 
     - debug:
-        msg: "{{VPNNAME}}"
+        msg: "{{ VPNNAME }}"
