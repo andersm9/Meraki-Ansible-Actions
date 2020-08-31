@@ -1,4 +1,4 @@
-VPNNAME: MXtoAWS
+VPNNAME: MXtoAWS2
 PINGIP: 172.31.26.184
 comment1: "Allow HTTPS Traffic"
 policy1: allow
