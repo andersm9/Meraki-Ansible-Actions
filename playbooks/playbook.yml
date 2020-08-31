@@ -1,8 +1,14 @@
 ---
-- name: meraki deployment
-  hosts: localhost
+- hosts: localhost
+  ignore_errors: yes
+  connection: localhost
+  gather_facts: False
   vars:
+    region: eu-west-1
+    count: 1
     auth_key: "{{ auth }}"
+  vars_files:
+    - config.yaml
 
   tasks:
 
