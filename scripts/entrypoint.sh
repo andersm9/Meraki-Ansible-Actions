@@ -3,5 +3,5 @@
 mkdir testdir
 ls
 cd playbooks
-ansible-playbook playbook.yml
+ansible-playbook playbook.yml --extra-vars "auth=$auth"
 
