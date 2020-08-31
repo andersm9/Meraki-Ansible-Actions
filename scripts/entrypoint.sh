@@ -1,5 +1,5 @@
 #!/bin/bash
-
+pip install boto3
 mkdir testdir
 ls
 cd playbooks
