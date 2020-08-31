@@ -10,3 +10,6 @@
       include_vars:
         file: config.yaml
         #name: devices
+
+    - debug:
+        msg: "{{VPNNAME}}"
