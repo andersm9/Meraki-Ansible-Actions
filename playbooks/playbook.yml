@@ -52,3 +52,6 @@
     - name: GET AWS Network info
       ec2_vpc_net_info:
         register: vpc_ids
+
+    - debug:
+        msg: "{{ vpc_ids }}"
