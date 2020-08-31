@@ -8,6 +8,7 @@
     count: 1
     auth_key: "{{ auth }}"
     AWS_ACCESS_KEY_ID: "{{ AWS_ACCESS_KEY_ID }}"
+    AWS_SECRET_ACCESS_KEY: "{{ AWS_SECRET_ACCESS_KEY }}"
   vars_files:
     - config.yaml
 
