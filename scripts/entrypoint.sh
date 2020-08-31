@@ -1,7 +1,6 @@
 #!/bin/bash
 pip install boto3
 pip install botocore
-export AWS_DEFAULT_REGION=eu-west-1
 mkdir testdir
 ls
 cd playbooks
