@@ -29,5 +29,5 @@ jobs:
     - shell: bash
       env:
         auth: ${{ secrets.MERAKIAPI }}
-        TESTSECRET: "{{ secrets.TESTSECRET }}"
+        #TESTSECRET: "{{ secrets.TESTSECRET }}"
       run: sh ./scripts/entrypoint.sh
