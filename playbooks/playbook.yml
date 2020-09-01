@@ -16,8 +16,7 @@
   vars_files:
     - config.yaml
 
-    - debug:
-        msg: "{{ TESTSECRET }}"
+
 
   tasks:
 
@@ -26,6 +25,8 @@
         file: config.yaml
         #name: devices
 
+    - debug:
+        msg: "{{ TESTSECRET }}"
     - name: GET The UPLINK IP
       uri:
         url: https://api.meraki.com/api/v1/organizations/265528/appliance/uplink/statuses
