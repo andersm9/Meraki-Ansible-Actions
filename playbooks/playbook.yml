@@ -41,7 +41,7 @@
       register: meraki_uplink
 
     - debug:
-        msg: "{{ VPNNAME }}"
+        msg: "{{ region }}"
 
     - name: GET Appliance Subnets
       uri:
