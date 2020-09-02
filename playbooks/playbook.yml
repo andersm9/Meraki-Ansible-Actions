@@ -6,8 +6,8 @@
   vars:
     count: 1
     auth_key: "{{ auth }}"
-    AWS_ACCESS_KEY_ID: "{{ AWS_ACCESS_KEY_ID }}"
-    AWS_SECRET_ACCESS_KEY: "{{ AWS_SECRET_ACCESS_KEY }}"
+    aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
+    aws_secret_access_key: "{{ AWS_SECRET_ACCESS_KEY }}"
     TESTSECRET: "{{ TESTSECRET }}"
     #region: "{{ REGION }}"
     region: us-east-1
@@ -59,5 +59,6 @@
     - name: GET AWS Network info
       ec2_vpc_net_info:
         region: "{{ region }}"
-        AWS_SECRET_ACCESS_KEY: "{{ AWS_SECRET_ACCESS_KEY }}"
+        aws_secret_access_key: "{{ aws_secret_access_key }}"
+        aws_access_key: "{{ aws_access_key }}"
       register: vpc_ids
