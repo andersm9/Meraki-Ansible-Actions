@@ -9,8 +9,8 @@
     AWS_ACCESS_KEY_ID: "{{ AWS_ACCESS_KEY_ID }}"
     AWS_SECRET_ACCESS_KEY: "{{ AWS_SECRET_ACCESS_KEY }}"
     TESTSECRET: "{{ TESTSECRET }}"
-    region: "{{ REGION }}"
-    aws-region: eu-west-1
+    #region: "{{ REGION }}"
+    region: us-east-1
 
   vars_files:
     - config.yaml
@@ -58,6 +58,6 @@
 # AWS part
     - name: GET AWS Network info
       ec2_vpc_net_info:
-        region: "{{ REGION }}"
+        region: "{{ region }}"
         AWS_SECRET_ACCESS_KEY: "{{ AWS_SECRET_ACCESS_KEY }}"
       register: vpc_ids
