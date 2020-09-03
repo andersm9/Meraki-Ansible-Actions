@@ -30,6 +30,9 @@
     - debug:
         msg: "{{ AWS_ACCESS_KEY_ID }}"
 
+    - debug:
+        msg: "{{ region }}
+
     - name: GET The UPLINK IP
       uri:
         url: https://api.meraki.com/api/v1/organizations/265528/appliance/uplink/statuses
