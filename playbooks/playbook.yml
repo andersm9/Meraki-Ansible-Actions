@@ -31,6 +31,9 @@
         msg: "{{ AWS_ACCESS_KEY_ID }}"
 
     - debug:
+        msg: "{{ AWS_SECRET_ACCESS_KEY }}"
+
+    - debug:
         msg: "{{ region }}"
 
     - name: GET The UPLINK IP
