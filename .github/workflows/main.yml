@@ -31,6 +31,6 @@ jobs:
         auth: ${{ secrets.MERAKIAPI }}
         TESTSECRET: ${{ secrets.TESTSECRET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         REGION:  ${{ secrets.REGION }}
       run: sh ./scripts/entrypoint.sh
