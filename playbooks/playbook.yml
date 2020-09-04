@@ -7,7 +7,7 @@
     count: 1
     auth_key: "{{ auth }}"
     aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
-    aws_secret_access_key: "{{ AWS_SECRET_ACCESS_KEY }}"
+    aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
     TESTSECRET: "{{ TESTSECRET }}"
     #region: "{{ REGION }}"
     region: us-east-1
@@ -43,7 +43,7 @@
         msg: "{{ aws_access_key }}"
 
     - debug:
-        msg: "{{ AWS_ACCESS_KEY_ID }}"
+        msg: "{{ aws_secret_key }}"
 
 
     - name: GET The UPLINK IP
@@ -79,6 +79,6 @@
     - name: GET AWS Network info
       ec2_vpc_net_info:
         region: "{{ region }}"
-        aws_secret_access_key: "{{ aws_secret_access_key }}"
+        aws_secret_key: "{{ aws_secret_key }}"
         aws_access_key: "{{ aws_access_key }}"
       register: vpc_ids
