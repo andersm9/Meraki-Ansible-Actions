@@ -67,9 +67,9 @@
       ec2_vpc_vgw:
         state: present
         region: "{{ region }}"
-        aws_secret_key: "{{ aws_secret_key }}"
-        aws_access_key: "{{ aws_access_key }}"
-        vpc_id: "{{vpc_ids.vpcs.0.vpc_id}}"
+        #aws_secret_key: "{{ aws_secret_key }}"
+        #aws_access_key: "{{ aws_access_key }}"
+        vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
         name: Ansible-VGW
         type: ipsec.1
       register: created_vgw
