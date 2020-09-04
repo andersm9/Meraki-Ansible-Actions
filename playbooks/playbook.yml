@@ -61,5 +61,5 @@
         aws_access_key: "{{ aws_access_key }}"
       register: vpc_ids
 
-    #- debug:
-        #msg: "{{ vpc_ids }}"
+    - debug:
+        msg: "{{ vpc_ids }}"
