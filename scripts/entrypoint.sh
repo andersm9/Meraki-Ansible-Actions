@@ -4,4 +4,5 @@ pip install botocore
 mkdir testdir
 ls
 cd playbooks
+echo $TESTSECRET
 ansible-playbook playbook.yml --extra-vars "auth=$auth AWS_ACCESS_KEY_ID =$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY region=$REGION TESTSECRET=$TESTSECRET"
