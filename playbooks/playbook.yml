@@ -37,10 +37,10 @@
         msg: "{{ aws_secret_access_key }}"
 
     - debug:
-        msg: AWS_SECRET_ACCESS_KEY
+        msg: AWS_ACCESS_KEY_ID
 
     - debug:
-        msg: "{{ AWS_SECRET_ACCESS_KEY }}"
+        msg: "{{ aws_access_key }}"
 
 
     - name: GET The UPLINK IP
