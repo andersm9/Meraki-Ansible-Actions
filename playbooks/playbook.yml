@@ -28,13 +28,16 @@
         msg: "{{ TESTSECRET }}"
 
     - debug:
+        msg: "{{ TESTSECRET }}"
+
+    - debug:
         msg: "{{ AWS_ACCESS_KEY_ID }}"
 
     - debug:
         msg: "{{ AWS_SECRET_ACCESS_KEY }}"
 
     - debug:
-        msg: "{{ region }}"
+        msg: TESTSECRET
 
     - name: GET The UPLINK IP
       uri:
