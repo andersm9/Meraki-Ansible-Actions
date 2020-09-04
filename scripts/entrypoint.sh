@@ -15,4 +15,4 @@ echo "region"
 echo $REGION
 echo "nonsense"
 echo $nonsense
-ansible-playbook playbook.yml --extra-vars "auth=$auth AWS_ACCESS_KEY_ID =$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY region=$REGION TESTSECRET=$TESTSECRET"
+ansible-playbook playbook.yml --extra-vars "auth=$auth AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY region=$REGION TESTSECRET=$TESTSECRET"
