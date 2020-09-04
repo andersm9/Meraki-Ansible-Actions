@@ -50,7 +50,7 @@
       register: meraki_uplink
 
     - debug:
-        msg: "{{ region }}"
+        msg: "{{ meraki_uplink }}"
 
     - name: GET Appliance Subnets
       uri:
