@@ -25,19 +25,23 @@
         #name: devices
 
     - debug:
-        msg: "{{ TESTSECRET }}"
+        msg: TESTSECRET
 
     - debug:
         msg: "{{ TESTSECRET }}"
+
+    - debug:
+        msg: aws_secret_access_key
 
     - debug:
         msg: "{{ aws_secret_access_key }}"
 
     - debug:
-        msg: "{{ AWS_SECRET_ACCESS_KEY }}"
+        msg: AWS_SECRET_ACCESS_KEY
 
     - debug:
-        msg: TESTSECRET
+        msg: "{{ AWS_SECRET_ACCESS_KEY }}"
+
 
     - name: GET The UPLINK IP
       uri:
