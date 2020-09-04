@@ -66,10 +66,13 @@
     - name: Create a new vgw attached to a specific VPC
       ec2_vpc_vgw:
         state: present
-        region: "{{ region }}"
+        #region: "{{ region }}"
         #aws_secret_key: "{{ aws_secret_key }}"
         #aws_access_key: "{{ aws_access_key }}"
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
         name: Ansible-VGW
         type: ipsec.1
       register: created_vgw
+
+    - debug:
+        msg: "{{ created_vgw }}"
