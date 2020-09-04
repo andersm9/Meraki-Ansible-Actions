@@ -10,7 +10,6 @@
     aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
     TESTSECRET: "{{ TESTSECRET }}"
     region: "{{ REGION }}"
-    #region: us-east-1
 
   vars_files:
     - config.yaml
@@ -23,27 +22,6 @@
       include_vars:
         file: config.yaml
         #name: devices
-
-    - debug:
-        msg: TESTSECRET
-
-    - debug:
-        msg: "{{ TESTSECRET }}"
-
-    - debug:
-        msg: aws_secret_access_key
-
-    - debug:
-        msg: "{{ aws_secret_access_key }}"
-
-    - debug:
-        msg: AWS_ACCESS_KEY_ID
-
-    - debug:
-        msg: "{{ aws_access_key }}"
-
-    - debug:
-        msg: "{{ aws_secret_key }}"
 
 
     - name: GET The UPLINK IP
@@ -59,8 +37,8 @@
         validate_certs: true
       register: meraki_uplink
 
-    - debug:
-        msg: "{{ meraki_uplink }}"
+    #- debug:
+        #msg: "{{ meraki_uplink }}"
 
     - name: GET Appliance Subnets
       uri:
@@ -83,5 +61,5 @@
         aws_access_key: "{{ aws_access_key }}"
       register: vpc_ids
 
-    - debug:
-        msg: "{{ vpc_ids }}"
+    #- debug:
+        #msg: "{{ vpc_ids }}"
