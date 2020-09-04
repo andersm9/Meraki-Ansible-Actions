@@ -42,6 +42,9 @@
     - debug:
         msg: "{{ aws_access_key }}"
 
+    - debug:
+        msg: "{{ AWS_ACCESS_KEY_ID }}"
+
 
     - name: GET The UPLINK IP
       uri:
