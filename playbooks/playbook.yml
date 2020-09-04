@@ -31,7 +31,7 @@
         msg: "{{ TESTSECRET }}"
 
     - debug:
-        msg: "{{ AWS_ACCESS_KEY_ID }}"
+        msg: "{{ aws_secret_access_key }}"
 
     - debug:
         msg: "{{ AWS_SECRET_ACCESS_KEY }}"
