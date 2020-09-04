@@ -8,7 +8,6 @@
     auth_key: "{{ auth }}"
     aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
     aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
-    TESTSECRET: "{{ TESTSECRET }}"
     region: "{{ REGION }}"
 
   vars_files:
@@ -61,5 +60,5 @@
         aws_access_key: "{{ aws_access_key }}"
       register: vpc_ids
 
-    - debug:
-        msg: "{{ vpc_ids }}"
+    #- debug:
+        #msg: "{{ vpc_ids }}"
