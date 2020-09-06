@@ -79,10 +79,10 @@
 
     - name: Propoage routes from the newly created VGW
       ec2_vpc_route_table:
-        vpc_id: "{{vpc_ids.vpcs.0.vpc_id}}"
-        route_table_id: "{{rtid}}"
+        vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
+        route_table_id: "{{ rtid }}"
         state: present
-        propagating_vgw_ids: "{{created_vgw.vgw.id}}"
+        propagating_vgw_ids: "{{ created_vgw.vgw.id }}"
         subnets: subnet-98dea0d0
       register: route_table
 
@@ -92,7 +92,7 @@
     - name: Create Customer Gateway
       ec2_customer_gateway:
         bgp_asn: 12345
-        ip_address: "{{meraki_uplink.json.1.uplinks.0.publicIp}}"
+        ip_address: "{{ meraki_uplink.json.1.uplinks.0.publicIp }}"
         name: Ansible_Meraki_MX
         region: eu-west-1
       register: cgw 
