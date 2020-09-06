@@ -111,7 +111,7 @@
         static_only: true
         vpn_gateway_id: "{{ created_vgw.vgw.id }}"
         customer_gateway_id: "{{ cgw.gateway.customer_gateway.customer_gateway_id }}"
-        tunnel_options: 
+        tunnel_options:
           -
             PreSharedKey: "{{ PSK }}"
           -
