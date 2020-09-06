@@ -95,7 +95,7 @@
         ip_address: "{{ meraki_uplink.json.1.uplinks.0.publicIp }}"
         name: Ansible_Meraki_MX
         region: eu-west-1
-      register: cgw 
+      register: cgw
 
     - debug:
         msg: "{{ cgw }}"
