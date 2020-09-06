@@ -9,6 +9,7 @@
     aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
     aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
     region: "{{ REGION }}"
+    PSK: "{{ PSK }}
 
   vars_files:
     - config.yaml
@@ -99,3 +100,22 @@
 
     - debug:
         msg: "{{ cgw }}"
+
+    - name: GET CGW_ID
+      set_fact:
+        cgw_id: "{{ cgw.gateway.customer_gateway.customer_gateway_id }}"
+
+    - name: create a VPN connection
+      ec2_vpc_vpn:
+        state: present
+        static_only: true
+        vpn_gateway_id: "{{ created_vgw.vgw.id }}"
+        customer_gateway_id: "{{ cgw.gateway.customer_gateway.customer_gateway_id }}"
+        tunnel_options: 
+          -
+            PreSharedKey: "{{ PSK }}"
+          -
+            PreSharedKey: "{{ PSK }}"
+        routes:
+          - "{{ meraki_subnets.json.0.subnet }}"
+      register: vpn
