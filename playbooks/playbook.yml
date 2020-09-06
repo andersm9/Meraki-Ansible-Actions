@@ -120,3 +120,28 @@
         routes:
           - "{{ meraki_subnets.json.0.subnet }}"
       register: vpn
+
+#set up meraki VPN 
+    - name: SET third party VPN
+      uri:
+        url: https://api.meraki.com/api/v1/organizations/265528/appliance/vpn/thirdPartyVPNPeers
+        method: PUT
+        headers:
+          Content-Type: application/json
+          Accept: application/json
+          X-Cisco-Meraki-API-Key: "{{ merakiapikey }}"
+        return_content: true
+        follow_redirects: all
+        validate_certs: true
+        body_format: json
+        body: { "peers": [ {  "name": "AWS_Peer",
+            "publicIp": "{{ vpn.vgw_telemetry.0.outside_ip_address }}" ,
+            "privateSubnets": [
+                "{{ vpc_ids.vpcs.0.cidr_block }}",
+            ],
+            "secret": "{{ PSK }}",
+            "networkTags": [ "all" ],
+            "ikeVersion": "1",
+            "ipsecPoliciesPreset": "aws"}
+        ]
+        }
