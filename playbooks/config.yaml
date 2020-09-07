@@ -8,7 +8,7 @@ destCidr1: Any
 srcPort1: Any
 srcCidr1: Any
 syslogEnabled1: false
-comment2: "Allow ICMP Traffic"
+comment2: "Allow ICMP Traffic2"
 policy2: allow
 protocol2: icmp
 destCidr2: Any
