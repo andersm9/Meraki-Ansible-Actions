@@ -82,6 +82,7 @@
     - name: Propoage routes from the newly created VGW
       ec2_vpc_route_table:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
+        region: "{{ region }}"
         route_table_id: "{{ RTID }}"
         state: present
         propagating_vgw_ids: "{{ created_vgw.vgw.id }}"
