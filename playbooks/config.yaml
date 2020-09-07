@@ -1,7 +1,7 @@
 VPNNAME: MXtoAWS3
 PINGIP: 172.31.26.184
 comment1: "Allow HTTPS Traffic"
-policy1: allow
+policy1: deny
 protocol1: tcp
 destPort1: 443
 destCidr1: Any
