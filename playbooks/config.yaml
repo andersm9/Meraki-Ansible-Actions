@@ -1,4 +1,4 @@
-VPNNAME: MXtoAWS2
+VPNNAME: MXtoAWS3
 PINGIP: 172.31.26.184
 comment1: "Allow HTTPS Traffic"
 policy1: allow
@@ -14,4 +14,4 @@ protocol2: icmp
 destCidr2: Any
 srcCidr2: Any
 syslogEnabled2: false
-region: eu-west-1
+#region: eu-west-1
