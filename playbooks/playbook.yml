@@ -101,7 +101,7 @@
 
     - debug:
         msg: "{{ igw }}"
-        
+
     - name: Add Default GW to New Routing Table
       ec2_vpc_route_table:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
