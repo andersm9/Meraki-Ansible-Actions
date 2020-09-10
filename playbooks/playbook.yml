@@ -94,7 +94,7 @@
 
     - name: Identify the VPC IGW
       ec2_vpc_igw:
-        vpc_id: vpc-abcdefgh
+        vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
         state: present
      register: igw
 
