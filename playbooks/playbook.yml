@@ -62,8 +62,8 @@
         aws_access_key: "{{ aws_access_key }}"
       register: vpc_ids
 
-    #- debug:
-        #msg: "{{ vpc_ids }}"
+    - debug:
+        msg: "{{ vpc_ids }}"
 
     - name: Create a new vgw attached to a specific VPC
       ec2_vpc_vgw:
@@ -76,8 +76,8 @@
         type: ipsec.1
       register: created_vgw
 
-    #- debug:
-        #msg: "{{ created_vgw }}"
+    - debug:
+        msg: "{{ created_vgw }}"
 
     - name: Propoage routes from the newly created VGW
       ec2_vpc_route_table:
