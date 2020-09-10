@@ -95,7 +95,7 @@
     - name: Identify the VPC IGW
       ec2_vpc_igw:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
-        #region: "{{ region }}"
+        region: "{{ region }}"
         state: present
       register: igw
 
