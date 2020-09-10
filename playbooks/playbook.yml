@@ -25,7 +25,7 @@
         #name: devices
 
 
-    - name: GET The UPLINK IP
+    - name: GET The MX UPLINK Public IP
       uri:
         url: https://api.meraki.com/api/v1/organizations/265528/appliance/uplink/statuses
         method: GET
@@ -41,7 +41,7 @@
     #- debug:
         #msg: "{{ meraki_uplink }}"
 
-    - name: GET Appliance Subnets
+    - name: GET MX Appliance Subnets
       uri:
         url: https://api.meraki.com/api/v1/devices/Q2NY-UYYZ-XVLK/appliance/dhcp/subnets
         method: GET
@@ -95,12 +95,24 @@
     - name: Identify the VPC IGW
       ec2_vpc_igw:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
-        region: "{{ region }}"
+        #region: "{{ region }}"
         state: present
       register: igw
 
     - debug:
         msg: "{{ igw }}"
+        
+		- name: Add Default GW to New Routing Table
+		  ec2_vpc_route_table:
+		    vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
+		    region: "{{ region }}"
+		    routes:
+		      - dest: 0.0.0.0/0
+		        gateway_id: "{{ igw.gateway_id }}"
+      register: public_route_table
+
+    - debug:
+        msg: "{{ public_route_table }}"
 
     - name: Create Customer Gateway
       ec2_customer_gateway:
