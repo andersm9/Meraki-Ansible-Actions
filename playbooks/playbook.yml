@@ -102,14 +102,14 @@
     - debug:
         msg: "{{ igw }}"
         
-		- name: Add Default GW to New Routing Table
-		  ec2_vpc_route_table:
-		    vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
-		    region: "{{ region }}"
-		    routes:
-		      - dest: 0.0.0.0/0
-		        gateway_id: "{{ igw.gateway_id }}"
-      register: public_route_table
+    - name: Add Default GW to New Routing Table
+      ec2_vpc_route_table:
+        vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
+        region: "{{ region }}"
+        routes:
+          - dest: 0.0.0.0/0
+            gateway_id: "{{ igw.gateway_id }}"
+        register: public_route_table
 
     - debug:
         msg: "{{ public_route_table }}"
