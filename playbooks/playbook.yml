@@ -92,6 +92,15 @@
     - debug:
         msg: "{{ route_table }}"
 
+    - name: Identify the VPC IGW
+      ec2_vpc_igw:
+        vpc_id: vpc-abcdefgh
+        state: present
+     register: igw
+
+    - debug:
+        msg: "{{ igw }}"
+
     - name: Create Customer Gateway
       ec2_customer_gateway:
         bgp_asn: 12345
