@@ -95,6 +95,7 @@
     - name: Identify the VPC IGW
       ec2_vpc_igw:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
+        region: "{{ region }}"
         state: present
      register: igw
 
@@ -106,7 +107,7 @@
         bgp_asn: 12345
         ip_address: "{{ meraki_uplink.json.1.uplinks.0.publicIp }}"
         name: Ansible_Meraki_MX
-        region: eu-west-1
+        region: "{{ region }}"
       register: cgw
 
     - debug:
