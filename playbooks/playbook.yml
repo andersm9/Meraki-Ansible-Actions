@@ -97,7 +97,7 @@
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
         region: "{{ region }}"
         state: present
-     register: igw
+      register: igw
 
     - debug:
         msg: "{{ igw }}"
