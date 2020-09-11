@@ -116,6 +116,9 @@
     - debug:
         msg: "{{ public_route_table }}"
 
+    - debug:
+        msg: "{{ route_table.route_table.route_table_id }}"
+
     - name: Create Customer Gateway
       ec2_customer_gateway:
         bgp_asn: 12345
