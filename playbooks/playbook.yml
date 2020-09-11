@@ -109,7 +109,7 @@
         route_table_id: "{{ route_table.route_table.route_table_id }}"
         purge_subnets: false
         routes:
-          - dest: 10.0.0.0/0
+          - dest: 10.0.0.0/8
             gateway_id: "{{ igw.gateway_id }}"
         register: public_route_table
 
