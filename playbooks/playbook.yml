@@ -100,7 +100,7 @@
       register: igw
 
     - debug:
-        msg: "{{ igw }}"
+        msg: "{{ igw.gateway_id }}"
 
     - name: Add Default GW to New Routing Table
       ec2_vpc_route_table:
