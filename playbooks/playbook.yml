@@ -107,6 +107,7 @@
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
         region: "{{ region }}"
         route_table_id: "{{ route_table.route_table.route_table_id }}"
+        purge_subnets: false
         routes:
           - dest: 0.0.0.0/0
             gateway_id: "{{ igw.gateway_id }}"
