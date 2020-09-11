@@ -108,10 +108,10 @@
         region: "{{ region }}"
         route_table_id: "{{ route_table.route_table.route_table_id }}"
         purge_subnets: false
-        routes:
-          - dest: 0.0.0.0/0
-            gateway_id: "{{ igw.gateway_id }}"
-        register: public_route_table
+        #routes:
+          #- dest: 0.0.0.0/0
+            #gateway_id: "{{ igw.gateway_id }}"
+        #register: public_route_table
 
     - debug:
         msg: "{{ public_route_table }}"
