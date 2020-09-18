@@ -11,6 +11,7 @@
     region: "{{ REGION }}"
     PSK: "{{ PSK }}"
     RTID: "{{ RTID }}"
+    SSH_KEY: "{{ SSH_KEY }}"
 
   vars_files:
     - config.yaml
