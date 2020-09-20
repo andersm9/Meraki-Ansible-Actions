@@ -86,8 +86,12 @@
         region: "{{ region }}"
         route_table_id: rtb-fe6f4887
         state: present
+        lookup: id
+        purge_subnets: false
+        routes:
+          - dest: 0.0.0.0/0
+            gateway_id: igw-67e6c800
         propagating_vgw_ids: "{{ created_vgw.vgw.id }}"
-        subnets: subnet-98dea0d0
       register: route_table
 
     - debug:
