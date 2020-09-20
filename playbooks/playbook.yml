@@ -107,23 +107,6 @@
     - debug:
         msg: "{{ igw.gateway_id }}"
 
-    - name: Add Default GW to New Routing Table
-      ec2_vpc_route_table:
-        vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
-        region: "{{ region }}"
-        route_table_id: "{{ route_table.route_table.route_table_id }}"
-        purge_subnets: false
-        routes:
-          - dest: 10.0.0.0/8
-            gateway_id: "{{ igw.gateway_id }}"
-        register: public_route_table
-
-    - debug:
-        msg: "{{ public_route_table }}"
-
-    - debug:
-        msg: "{{ route_table.route_table.route_table_id }}"
-
     - name: Create Customer Gateway
       ec2_customer_gateway:
         bgp_asn: 12345
