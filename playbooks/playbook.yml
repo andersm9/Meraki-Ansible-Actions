@@ -80,7 +80,7 @@
     - debug:
         msg: "{{ created_vgw }}"
 
-    - name: Propoage routes from the newly created VGW
+    - name: Propagate routes from the newly created VGW
       ec2_vpc_route_table:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
         region: "{{ region }}"
@@ -162,3 +162,29 @@
             "ipsecPoliciesPreset": "aws"}
         ]
         }
+
+    - name: SET VPN Firewall
+      uri:
+        url: https://api.meraki.com/api/v1/organizations/265528/appliance/vpn/vpnFirewallRules
+        method: PUT
+        headers:
+          Content-Type: application/json
+          Accept: application/json
+          X-Cisco-Meraki-API-Key: 1eb7b53957a29250a67050d7290c37cd7869083b
+        return_content: true
+        follow_redirects: all
+        validate_certs: true
+        body_format: json 
+        body: {"rules": [ {
+            "comment": "Allow TCP traffic to subnet with HTTP servers.",
+            "policy": "allow",
+            "protocol": "tcp",
+            "destPort": 443,
+            "destCidr": "192.168.1.0/24",
+            "srcPort": "Any",
+            "srcCidr": "Any",
+            "syslogEnabled": false
+        }
+        ]
+        }
+      register: VPN_Status
