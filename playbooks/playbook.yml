@@ -28,6 +28,9 @@
     - debug:
         msg: VPNNAME
 
+    - debug:
+        msg: "VPNNAME"
+
     - name: GET The MX UPLINK Public IP
       uri:
         url: https://api.meraki.com/api/v1/organizations/265528/appliance/uplink/statuses
