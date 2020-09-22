@@ -15,7 +15,24 @@ jobs:
     steps:
     # Important: This sets up your GITHUB_WORKSPACE environment variable
     - uses: actions/checkout@v2
-     
+
+    - name: AWS SSM Send-Command
+      uses: peterkimzz/aws-ssm-send-command@1.0.2
+        id: ssm
+        with:
+          aws-region: eu-west-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          instance-ids: i-08793cba603e6ef4f
+
+          working-directory: /home/ubuntu/application
+          command: ls -al
+          comment: Hello world!
+
+    # Catch SSM outputs
+    - name: Get the outputs
+      run: echo "The Command id is ${{ steps.ssm.outputs.command-id }}"
+
     - name: Lint Ansible Playbook
       # replace "master" with any valid ref
       uses: ansible/ansible-lint-action@master
