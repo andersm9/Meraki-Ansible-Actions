@@ -88,9 +88,6 @@
         state: present
         lookup: id
         purge_subnets: false
-        routes:
-          - dest: 0.0.0.0/0
-            gateway_id: igw-67e6c800
         propagating_vgw_ids: "{{ created_vgw.vgw.id }}"
       register: route_table
 
@@ -104,8 +101,8 @@
         state: present
       register: igw
 
-    - debug:
-        msg: "{{ igw.gateway_id }}"
+    #- debug:
+        #msg: "{{ igw.gateway_id }}"
 
     - name: Create Customer Gateway
       ec2_customer_gateway:
