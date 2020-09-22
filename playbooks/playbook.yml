@@ -174,7 +174,7 @@
         return_content: true
         follow_redirects: all
         validate_certs: true
-        body_format: json 
+        body_format: json
         body: {"rules": [ {
             "comment": "Allow TCP traffic to subnet with HTTP servers.",
             "policy": "allow",
