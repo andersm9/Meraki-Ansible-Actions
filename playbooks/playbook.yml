@@ -188,7 +188,7 @@
             "destCidr": "{{ destCidr1 }}",
             "srcPort": "{{ scrPort1 }}",
             "srcCidr": "{{ srcCidr1 }}",
-            "syslogEnabled": "{{ syslogEnabled1 "}}
+            "syslogEnabled": "{{ syslogEnabled1 }}"
         }
         ]
         }
