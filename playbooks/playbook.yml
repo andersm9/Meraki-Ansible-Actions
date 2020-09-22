@@ -186,7 +186,7 @@
             "protocol": "{{ protocol1 }}",
             "destPort": "{{ destPort1 }}",
             "destCidr": "{{ destCidr1 }}",
-            "srcPort": "{{ scrPort1 }}",
+            "srcPort": "{{ srcPort1 }}",
             "srcCidr": "{{ srcCidr1 }}",
             "syslogEnabled": "{{ syslogEnabled1 }}"
         }
