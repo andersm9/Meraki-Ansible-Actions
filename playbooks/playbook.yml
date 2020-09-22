@@ -26,7 +26,7 @@
         #name: devices
 
     - debug:
-        msg: VPNNAME
+        msg: "{{ VPNNAME }}"
 
     - debug:
         msg: "VPNNAME"
