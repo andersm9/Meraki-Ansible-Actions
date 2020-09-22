@@ -25,6 +25,8 @@
         file: config.yaml
         #name: devices
 
+    - debug:
+        msg: VPNNAME
 
     - name: GET The MX UPLINK Public IP
       uri:
