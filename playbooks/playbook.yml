@@ -89,7 +89,7 @@
         lookup: id
         purge_subnets: false
         routes:
-				  - dest: 0.0.0.0/0
+	  - dest: 0.0.0.0/0
             gateway_id: igw-67e6c800
         propagating_vgw_ids: "{{ created_vgw.vgw.id }}"
       register: route_table
