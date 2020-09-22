@@ -181,14 +181,14 @@
         validate_certs: true
         body_format: json
         body: {"rules": [ {
-            "comment": "Allow TCP traffic to subnet with HTTP servers.",
-            "policy": "allow",
-            "protocol": "tcp",
-            "destPort": 443,
-            "destCidr": "192.168.1.0/24",
-            "srcPort": "Any",
-            "srcCidr": "Any",
-            "syslogEnabled": false
+            "comment": "{{ comment1 }}",
+            "policy": "{{ policy1 }}",
+            "protocol": "{{ protocol1 }}",
+            "destPort": "{{ destPort1 }}",
+            "destCidr": "{{ destCidr1 }}",
+            "srcPort": "{{ scrPort1 }}",
+            "srcCidr": "{{ srcCidr1 }}",
+            "syslogEnabled": "{{ syslogEnabled1 "}}
         }
         ]
         }
