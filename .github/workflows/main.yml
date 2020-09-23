@@ -24,7 +24,7 @@ jobs:
            playbooks/playbook.yml
         override-deps: |
           ansible==2.9.12
-          ansible-lint==4.3.3
+          ansible-lint==4.3.5
         
     - shell: bash
       env:
