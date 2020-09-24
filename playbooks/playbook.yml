@@ -89,7 +89,7 @@
       ec2_vpc_route_table:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
         region: "{{ region }}"
-        route_table_id: "{{ RTID }}"
+        route_table_id: rtb-fe6f4887
         state: present
         lookup: id
         purge_subnets: false
