@@ -36,14 +36,15 @@ jobs:
       run: sh ./scripts/entrypoint.sh
 
     - name: AWS SSM Send-Command
+      tags:
+        - skip_ansible_lint
       uses: peterkimzz/aws-ssm-send-command@1.0.2
       id: ssm
       with:
           aws-region: eu-west-1
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          instance-ids: | 
-            i-08793cba603e6ef4f
+          instance-ids: | i-08793cba603e6ef4f
           working-directory: /home/ubuntu/application
           command: ls -al
           comment: Hello world!
