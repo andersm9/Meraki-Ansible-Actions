@@ -36,8 +36,6 @@ jobs:
       run: sh ./scripts/entrypoint.sh
 
     - name: AWS SSM Send-Command
-      tags:
-        - skip_ansible_lint
       uses: peterkimzz/aws-ssm-send-command@1.0.2
       id: ssm
       with:
