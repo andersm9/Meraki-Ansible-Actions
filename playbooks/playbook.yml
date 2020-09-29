@@ -193,7 +193,9 @@
             "comment": "{{ comment2 }}",
             "policy": "{{ policy2 }}",
             "protocol": "{{ protocol2 }}",
+            "destPort": "{{ destPort2 }}",
             "destCidr": "{{ destCidr2 }}",
+            "srcPort": "{{ srcPort2 }}",
             "srcCidr": "{{ srcCidr2 }}",
             "syslogEnabled": "{{ syslogEnabled2 }}"
         }
