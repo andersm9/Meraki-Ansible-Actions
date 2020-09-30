@@ -36,7 +36,7 @@ jobs:
       run: sh ./scripts/entrypoint.sh
 
     - name: AWS SSM Send-Command
-      uses: peterkimzz/aws-ssm-send-command@1.0.4
+      uses: peterkimzz/aws-ssm-send-command@master
       id: ssm
       with:
           aws-region: eu-west-1
