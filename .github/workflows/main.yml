@@ -49,4 +49,5 @@ jobs:
 
     # Catch SSM outputs
     - name: Get the outputs
-      run: echo "The Command id is ${{ steps.ssm.outputs.command-id }}"
+      #run: echo "The Command id is ${{ steps.ssm.outputs.command-id }}"
+      run: echo "The Command is ${{ steps.ssm.outputs }}"
