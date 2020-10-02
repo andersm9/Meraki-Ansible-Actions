@@ -60,4 +60,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         PSK: ${{ secrets.PSK }}
         RTID: ${{ secrets.RTID }}
-      run: sh ./scripts/entrypoint.sh
+      run: sh ./scripts/entrypoint2.sh
