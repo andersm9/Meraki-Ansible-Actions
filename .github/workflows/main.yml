@@ -51,3 +51,13 @@ jobs:
     - name: Get the outputs
       #run: echo "The Command id is ${{ steps.ssm.outputs.command-id }}"
       run: echo "The Command is ${{ steps.ssm.outputs }}"
+
+
+    - shell: bash
+      env:
+        auth: ${{ secrets.MERAKIAPI }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        PSK: ${{ secrets.PSK }}
+        RTID: ${{ secrets.RTID }}
+      run: sh ./scripts/entrypoint.sh
