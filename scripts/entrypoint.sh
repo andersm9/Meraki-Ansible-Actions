@@ -11,5 +11,5 @@ echo a
 echo "$a" 
 echo $a
 echo $output
-echo $RTID
+printf $RTID
 echo "end of entrypoint.sh"
