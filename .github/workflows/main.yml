@@ -52,7 +52,7 @@ jobs:
       run: echo "The Command id is ${{ steps.ssm.outputs.command-id }}"
       #run: echo "The Command is ${{ steps.ssm.outputs }}"
 
-- shell: bash
+    - shell: bash
       env:
         auth: ${{ secrets.MERAKIAPI }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
