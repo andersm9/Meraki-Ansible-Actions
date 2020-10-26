@@ -42,7 +42,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         PSK: ${{ secrets.PSK }}
         RTID: ${{ secrets.RTID }}
-      run: aws ssm get-command-invocation --command-id 091c12cd-463a-4924-a345-f5b86b01478f --instance-id i-0b8d9c6ca369c6e34
+      run: aws ssm get-command-invocation --command-id 091c12cd-463a-4924-a345-f5b86b01478f --instance-id i-0b8d9c6ca369c6e34 --region eu-west-1
       
     - name: AWS SSM Send-Command
       uses: peterkimzz/aws-ssm-send-command@master
