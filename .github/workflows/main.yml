@@ -52,6 +52,11 @@ jobs:
       run: echo "The Command id is ${{ steps.ssm.outputs.command-id }}"
       #run: echo "The Command is ${{ steps.ssm.outputs }}"
 
+    - name: Sleep for 30 seconds
+      uses: jakejarvis/wait-action@master
+      with:
+        time: '30s'
+        
     - shell: bash
       env:
         auth: ${{ secrets.MERAKIAPI }}
