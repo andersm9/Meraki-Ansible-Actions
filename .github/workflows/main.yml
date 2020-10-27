@@ -42,24 +42,21 @@ jobs:
           instance-ids: ${{ secrets.INSTANCE_IDS }}
           working-directory: /home/ubuntu
           command: ping -c 1 195.27.35.158
-          comment: Ping to Google
+          comment: Ping to Public IP
 
     # Catch SSM outputs
     - name: Get the outputs
       run: echo "The Command id is ${{ steps.ssm.outputs.command-id }}"
-      #run: echo "The Command is ${{ steps.ssm.outputs }}"
 
     - name: Sleep for 30 seconds
       uses: jakejarvis/wait-action@master
       with:
         time: '30s'
-        
+    
+    # Catch the output of the ping test
     - shell: bash
       env:
-        auth: ${{ secrets.MERAKIAPI }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        PSK: ${{ secrets.PSK }}
-        RTID: ${{ secrets.RTID }}
       run: aws ssm get-command-invocation --command-id ${{ steps.ssm.outputs.command-id }} --instance-id i-0b8d9c6ca369c6e34 --region eu-west-1
     
