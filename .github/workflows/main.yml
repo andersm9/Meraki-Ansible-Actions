@@ -44,10 +44,6 @@ jobs:
           command: ping -c 1 195.27.35.158
           comment: Ping to Public IP
 
-    # Catch SSM outputs
-    - name: Get the outputs
-      run: echo "The Command id is ${{ steps.ssm.outputs.command-id }}"
-
     - name: Sleep for 30 seconds
       uses: jakejarvis/wait-action@master
       with:
