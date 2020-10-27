@@ -22,9 +22,6 @@ jobs:
       with:
         targets: |
            playbooks/playbook.yml
-        override-deps: |
-          ansible==2.9.12
-          ansible-lint==4.3.5
         
     - shell: bash
       env:
@@ -39,7 +36,7 @@ jobs:
       uses: peterkimzz/aws-ssm-send-command@master
       id: ssm
       with:
-          aws-region: eu-west-1
+          aws-region: ${{ secrets.AWS_REGION }}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           instance-ids: ${{ secrets.INSTANCE_IDS }}
