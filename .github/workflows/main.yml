@@ -44,7 +44,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           instance-ids: ${{ secrets.INSTANCE_IDS }}
           working-directory: /home/ubuntu
-          command: ping -c 1 8.8.8.8
+          command: ping -c 1 195.27.35.158
           comment: Ping to Google
 
     # Catch SSM outputs
