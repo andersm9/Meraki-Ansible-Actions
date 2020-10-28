@@ -151,7 +151,7 @@
         headers:
           Content-Type: application/json
           Accept: application/json
-          X-Cisco-Meraki-API-Key: "{{ auth }}"
+          X-Cisco-Meraki-API-Key: "{{ MERAKI_API_KEY }}"
         return_content: true
         follow_redirects: all
         validate_certs: true
