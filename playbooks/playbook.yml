@@ -88,7 +88,7 @@
     - name: Propagate routes from the newly created VGW
       ec2_vpc_route_table:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
-        #region: "{{ region }}"
+        region: "{{ region }}"
         route_table_id: rtb-fe6f4887
         state: present
         lookup: id
@@ -105,7 +105,7 @@
     - name: Identify the VPC IGW
       ec2_vpc_igw:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
-        #region: "{{ region }}"
+        region: "{{ region }}"
         state: present
       register: igw
 
