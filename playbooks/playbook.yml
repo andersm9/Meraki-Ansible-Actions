@@ -63,7 +63,7 @@
 # AWS part
     - name: GET AWS Network info
       ec2_vpc_net_info:
-        #region: "{{ region }}"
+        region: "{{ region }}"
         #aws_secret_key: "{{ aws_secret_key }}"
         #aws_access_key: "{{ aws_access_key }}"
       register: vpc_ids
@@ -74,7 +74,7 @@
     - name: Create a new vgw attached to a specific VPC
       ec2_vpc_vgw:
         state: present
-        #region: "{{ region }}"
+        region: "{{ region }}"
         #aws_secret_key: "{{ aws_secret_key }}"
         #aws_access_key: "{{ aws_access_key }}"
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
@@ -117,7 +117,7 @@
         bgp_asn: 12345
         ip_address: "{{ meraki_uplink.json.1.uplinks.0.publicIp }}"
         name: Ansible_Meraki_MX
-        #region: "{{ region }}"
+        region: "{{ region }}"
       register: cgw
 
     - debug:
