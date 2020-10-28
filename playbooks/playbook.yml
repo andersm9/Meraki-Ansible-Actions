@@ -7,6 +7,7 @@
     count: 1
     aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
     aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
+    aws_gateway_id : "{{ AWS_GATEWAY_ID }}"
     region: "{{ REGION }}"
     PSK: "{{ PSK }}"
     RTID: "{{ RTID }}"
@@ -80,7 +81,7 @@
         purge_subnets: false
         routes:
           - dest: 0.0.0.0/0
-            gateway_id: igw-67e6c800
+            gateway_id: "{{ AWS_GATEWAY_ID }}"
         propagating_vgw_ids: "{{ created_vgw.vgw.id }}"
       register: route_table
 
