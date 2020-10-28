@@ -64,7 +64,7 @@
     - name: GET AWS Network info
       ec2_vpc_net_info:
         region: "{{ region }}"
-        aws_secret_key: "{{ aws_secret_key }}"
+        #aws_secret_key: "{{ aws_secret_key }}"
         #aws_access_key: "{{ aws_access_key }}"
       register: vpc_ids
 
