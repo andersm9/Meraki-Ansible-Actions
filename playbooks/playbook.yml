@@ -10,7 +10,7 @@
     region: "{{ REGION }}"
     PSK: "{{ PSK }}"
     RTID: "{{ RTID }}"
-    SSH_KEY: "{{ SSH_KEY }}"
+    #SSH_KEY: "{{ SSH_KEY }}"
 
   vars_files:
     - config.yaml
@@ -74,7 +74,7 @@
       ec2_vpc_route_table:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
         region: "{{ region }}"
-        route_table_id: rtb-fe6f4887
+        route_table_id: "{{ RTID }}"
         state: present
         lookup: id
         purge_subnets: false
