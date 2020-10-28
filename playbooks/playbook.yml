@@ -5,7 +5,7 @@
   gather_facts: False
   vars:
     count: 1
-    auth_key: "{{ auth }}"
+    auth_key: "{{ MERAKI_API_KEY }}"
     aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
     aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
     region: "{{ REGION }}"
@@ -38,7 +38,7 @@
         headers:
           Content-Type: application/json
           Accept: application/json
-          X-Cisco-Meraki-API-Key: "{{ auth }}"
+          X-Cisco-Meraki-API-Key: "{{ MERAKI_API_KEY }}"
         return_content: true
         follow_redirects: all
         validate_certs: true
@@ -54,7 +54,7 @@
         headers:
           Content-Type: application/json
           Accept: application/json
-          X-Cisco-Meraki-API-Key: "{{ auth }}"
+          X-Cisco-Meraki-API-Key: "{{ MERAKI_API_KEY }}"
         return_content: true
         follow_redirects: all
         validate_certs: true
