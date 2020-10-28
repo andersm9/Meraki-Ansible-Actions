@@ -28,6 +28,7 @@ jobs:
         MERAKI_API_KEY: ${{ secrets.MERAKIAPI }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_GATEWAY_ID: ${{ secrets.AWS_GATEWAY_ID }}
         PSK: ${{ secrets.PSK }}
         RTID: ${{ secrets.RTID }}
       run: sh ./scripts/entrypoint.sh
