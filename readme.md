@@ -31,12 +31,12 @@ GitHub Actions help you automate tasks within your development life cycle. GitHu
 ![Diagram](Images/Actions.png)
 
 
-## header 2
-list item 1
-list item 2
+## Workflow
+![Diagram](Images/Workflow.png)
 
 # header 1
-
+list item 1
+list item 2
 ## header 2
 
 ### header 3
