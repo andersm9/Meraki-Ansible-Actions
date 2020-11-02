@@ -1,6 +1,6 @@
 # Introduction
 
-This project provides a simple example of using tools traditinally used for software development and applying them in the context of networking. The objective is to provide an environment where changes can be made across your IT environment in an agile manner, where your network’s configuration changes operational status is automatically evaluated and changes orechestrated between various networking and software componants.
+This project provides a simple example of using tools traditionally used for software development and applying them in the context of networking. The objective is to provide an environment where changes can be made across your IT environment in an agile manner, where your network’s configuration changes operational status is automatically evaluated and changes orechestrated between various networking and software componants.
 
 This project uses the following tools:
 
@@ -48,33 +48,28 @@ AWS_GATEWAY_ID | vgw-7nulnyegucu9q3692h0d | Virtual Private Gateway
 AWS_REGION | eu-west-1 | 
 AWS_SECRET_ACCESS_KEY | BhdcqNDnvCnqcaSb4bjnspwDzb8Rv2keu7+CMytB| 
 INSTANCE_IDS | i-0a4j05i2hf5020wxke | AWS EC2 Instance ID
-MERAKIAPI | 400d1de3f36caed4bdb91b7cbaba1950f0d7827d | 
+MERAKIAPI | 400d1de3f36caed4bdb91b7cbaba1950f0d7827d | Meraki Dashboard API key
 PSK | VH19rDeWT_wne543217nx3mri8g4sv6Q | Preshared key for IPSec Tunnel
 RTID | rtb-fb6f1234 | AWS Route Table ID
 
-## header 2
+## Requirements
 
-### header 3
-    Highlighted text
 
-### header 3
-    more highlighted text
+### Meraki
+Any MX Security Appliance
+Instructions for generating a Meraki Dashboard API key:
+https://developer.cisco.com/meraki/build/meraki-postman-collection-getting-started/
+
+### Amazon Web Services
+Single EC2 instance running, with SSM agent installed. SSM comes preinstalled in some Amazon Machine Images
+https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
+
+AWS Access Key and Secret Access Key
+https://aws.amazon.com/blogs/security/how-to-find-update-access-keys-password-mfa-aws-management-console/
+
+
+### Other
+PSK - the Preshared key used in the IPSec Tunnel can be generated at random.
+
+INSTANCE_IDS, AWS_GATEWAY_ID, AWS_REGION and RTID are found in the EC2 and VPC Service sections
  
-
-# Create a file "credentials.ini" with the following contents:
-
-[camera]
-
-#comment
-
-some delimited text = \*\*rtsp:\/\/\<camera IP>/live\*\*
-    
-#e.g.host = rtsp://192.168.127.29:9000/live
-
-## Launch the script:
-
-    $python3 MV_OpenCV.py
-## link to local .png
-![Diagram](images/Picture2.png)
-
-
