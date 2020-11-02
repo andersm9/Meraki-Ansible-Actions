@@ -1,88 +1,48 @@
-# Overview
+# Header 1
 
-This document provides a step by step guide to integrating the RTSP output from a Meraki MV camera, with a pretrained OpenCV 3.3 dnn module, running SSD Detection on the COCO dataset.
+Some text
 
 The script shall:
 
-* launch a local video stream, with a bounding box for detected objects and associated confidence score
-* print to cli the object and confidence score  of detected objects
-* publish to an MQTT broker the object and confidence of objects detected, using the topic "python/test"
+* bullet one
+* bullet two
 
-This was developed and tested using a Macbook Pro. The detection time for objects entering the frame to being reported on the video and MQTT stream is of the order 1.5-2.0 seconds.
 
-# Dependencies
-## Python
-This script was develeoped using python version 3.7.3
+some more texst
 
-## Meraki Camera Requirements
-Firmware version 4.2 or newer
-2nd generation MV camera
-For further details:
-https://documentation.meraki.com/MV/Advanced_Configuration/External_RTSP
-# Steps
+# Another Header 1
+## header 2
+header 2 text
 
-## Installation
+## header 2
+list item 1
+list item 2
 
-### Create a Virtual Environment:
-    $virtualenv venv
+# header 1
 
-### Activate the virtual Environment:
-    $source venv/bin/activate
+## header 2
 
-### Clone the Repo:
-    $git clone https://github.com/andersm9/Meraki_OpenCV_RTSP.git
-    $cd Meraki_OpenCV_RTSP
+### header 3
+    Highlighted text
 
-### Install the requirements:
-    $pip3 install -r requirements.txt
-
-# Dashboard configuration:
-
-Cameras -> <your_camera> -> Setting -> External RTSP -> yes
-
-Make a note of your RTSP stream URL 
+### header 3
+    more highlighted text
+ 
 
 # Create a file "credentials.ini" with the following contents:
 
 [camera]
 
-#RTSP source
+#comment
 
-host = \*\*rtsp:\/\/\<camera IP>/live\*\*
+some delimited text = \*\*rtsp:\/\/\<camera IP>/live\*\*
     
 #e.g.host = rtsp://192.168.127.29:9000/live
-
-[mqtt]
-
-broker = \*\*mqtt broker location\*\*
-    
-#e.g broker = broker.hivemq.com
-
-port = \*\*mqtt broker port\*\*
-    
-#e.g. port = 1883
-
-[ssd]
-
-#set location of SSD model (preconfigured for this repo)
-
-prototxt = MobileNetSSD_deploy.prototxt.txt
-
-model = MobileNetSSD_deploy.caffemodel
-
-#set confidence level for detection
-
-conf = \*\*0-1\*\*
-
-#e.g for 20% confidence or above for detection
-
-#conf = 0.2
 
 ## Launch the script:
 
     $python3 MV_OpenCV.py
-## Example Local Video
+## link to local .png
 ![Diagram](images/Picture2.png)
-## Example MQTT stream
-![Diagram](images/Picture1.png)
+
 
