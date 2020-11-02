@@ -45,12 +45,12 @@ Secret| Format | notes
 ------------ | ------------- | -------------------
 AWS_ACCESS_KEY_ID | 208ZW1NH6X4G6ZRH62C3 |
 AWS_GATEWAY_ID | vgw-7nulnyegucu9q3692h0d | Virtual Private Gateway
-AWS_REGION | eu-west-1 | Notes
-AWS_SECRET_ACCESS_KEY | BhdcqNDnvCnqcaSb4bjnspwDzb8Rv2keu7+CMytB| Notes
-INSTANCE_IDS | i-0a4j05i2hf5020wxke | Notes
+AWS_REGION | eu-west-1 | 
+AWS_SECRET_ACCESS_KEY | BhdcqNDnvCnqcaSb4bjnspwDzb8Rv2keu7+CMytB| 
+INSTANCE_IDS | i-0a4j05i2hf5020wxke | AWS EC2 Instance ID
 MERAKIAPI | 400d1de3f36caed4bdb91b7cbaba1950f0d7827d | 
-PSK | Format | Notes
-RTID | rtb-fb6f1234 | Notes
+PSK | Format | Preshared key for IPSec Tunnel
+RTID | rtb-fb6f1234 | AWS Route Table ID
 
 ## header 2
 
