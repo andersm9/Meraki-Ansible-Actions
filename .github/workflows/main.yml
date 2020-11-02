@@ -34,7 +34,7 @@ jobs:
         RTID: ${{ secrets.RTID }}
       run: sh ./scripts/entrypoint.sh
   
-    - name: AWS SSM Send-Command - Execute ping
+    - name: Execute ping (Using AWS SSM Send-Command)
       uses: peterkimzz/aws-ssm-send-command@master
       id: ssm
       with:
@@ -46,13 +46,13 @@ jobs:
           command: ping -c 1 195.27.35.158
           comment: Ping to Public IP
 
-    - name: Sleep for 30 seconds
+    - name: Sleep (for 30 seconds)
       uses: jakejarvis/wait-action@master
       with:
         time: '30s'
     
     # Catch the output of the ping test
-    - name: AWS SSM Send-Command - Ping results download
+    - name: Ping results download (Using AWS SSM Send-Command)
       shell: bash
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
