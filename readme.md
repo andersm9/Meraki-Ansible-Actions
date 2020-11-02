@@ -63,16 +63,15 @@ RTID | rtb-fb6f1234 | AWS Route Table ID
 * https://developer.cisco.com/meraki/build/meraki-postman-collection-getting-started/
 
 ### Amazon Web Services
-Single EC2 instance running, with SSM agent installed. SSM comes preinstalled in some Amazon Machine Images
-https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
+* Single EC2 instance running, with SSM agent installed. SSM comes preinstalled in some Amazon Machine Images
+* https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
+* AWS Access Key and Secret Access Key
+* https://aws.amazon.com/blogs/security/how-to-find-update-access-keys-password-mfa-aws-management-console/
 
-AWS Access Key and Secret Access Key
-https://aws.amazon.com/blogs/security/how-to-find-update-access-keys-password-mfa-aws-management-console/
-
-INSTANCE_IDS, AWS_GATEWAY_ID, AWS_REGION and RTID can be found in the EC2 and VPC Service sections
+* INSTANCE_IDS, AWS_GATEWAY_ID, AWS_REGION and RTID can be found in the EC2 and VPC Service sections
 
 ### Other
-PSK - the Preshared key used in the IPSec Tunnel can be generated at random.
+* PSK - the Preshared key used in the IPSec Tunnel can be generated at random.
 
 
  
