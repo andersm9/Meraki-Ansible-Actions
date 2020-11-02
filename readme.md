@@ -43,15 +43,14 @@ The format of the secrets is as follows:
 
 Secret| Format | notes
 ------------ | ------------- | -------------------
-AWS_ACCESS_KEY_ID | Content from cell 2 |
-AWS_GATEWAY_ID | Content in the second column | 
-AWS_REGION | Format | Notes
-AWS_SECRET_ACCESS_KEY | Format | Notes
-INSTANCE_IDS | Format | Notes
-MERAKIAPI | Format | Notes
+AWS_ACCESS_KEY_ID | 208ZW1NH6X4G6ZRH62C3 |
+AWS_GATEWAY_ID | vgw-7nulnyegucu9q3692h0d | Virtual Private Gateway
+AWS_REGION | eu-west-1 | Notes
+AWS_SECRET_ACCESS_KEY | BhdcqNDnvCnqcaSb4bjnspwDzb8Rv2keu7+CMytB| Notes
+INSTANCE_IDS | i-0a4j05i2hf5020wxke | Notes
+MERAKIAPI | 400d1de3f36caed4bdb91b7cbaba1950f0d7827d | 
 PSK | Format | Notes
-RTID | Format | Notes
-SSH_KEY | Format | Notes
+RTID | rtb-fb6f1234 | Notes
 
 ## header 2
 
