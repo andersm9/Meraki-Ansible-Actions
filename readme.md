@@ -34,7 +34,13 @@ GitHub Actions help you automate tasks within your development life cycle. GitHu
 ## Workflow
 ![Diagram](Images/Workflow.png)
 
-# header 1
+# Secrets
+Confidential details such as API keys should be passed to your Actions Workflow via the 'Secrets' function. This is accessible via Settings->Secrets and should be configured as follows:
+
+![Diagram](Images/Secrets.png)
+
+The format of the secrets is as follows:
+
 list item 1
 list item 2
 ## header 2
