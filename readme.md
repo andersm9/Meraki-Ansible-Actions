@@ -41,11 +41,17 @@ Confidential details such as API keys should be passed to your Actions Workflow 
 
 The format of the secrets is as follows:
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
-
+Secret| Format | notes
+------------ | ------------- | -------------------
+AWS_ACCESS_KEY_ID | Content from cell 2 |
+AWS_GATEWAY_ID | Content in the second column | 
+AWS_REGION | Format | Notes
+AWS_SECRET_ACCESS_KEY | Format | Notes
+INSTANCE_IDS | Format | Notes
+MERAKIAPI | Format | Notes
+PSK | Format | Notes
+RTID | Format | Notes
+SSH_KEY | Format | Notes
 
 ## header 2
 
