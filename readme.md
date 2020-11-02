@@ -1,6 +1,6 @@
 # Introduction
 
-This project provides a simple example of using tools traditionally used for software development and applying them in the context of networking. The objective is to provide an environment where changes can be made across your IT environment in an agile manner, where your network’s configuration changes operational status is automatically evaluated and changes orechestrated between various networking and software componants.
+This project provides a simple example of using tools traditionally used for software development and applying them in the context of networking. The objective is to provide an environment where changes can be made across your IT environment in an agile manner, where your network’s configuration changes operational status is automatically evaluated and changes orchestrated between various networking and software componants.
 
 This project uses the following tools:
 
