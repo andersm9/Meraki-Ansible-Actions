@@ -41,8 +41,12 @@ Confidential details such as API keys should be passed to your Actions Workflow 
 
 The format of the secrets is as follows:
 
-list item 1
-list item 2
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
+
 ## header 2
 
 ### header 3
