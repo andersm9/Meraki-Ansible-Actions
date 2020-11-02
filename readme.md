@@ -49,7 +49,7 @@ AWS_REGION | eu-west-1 |
 AWS_SECRET_ACCESS_KEY | BhdcqNDnvCnqcaSb4bjnspwDzb8Rv2keu7+CMytB| 
 INSTANCE_IDS | i-0a4j05i2hf5020wxke | AWS EC2 Instance ID
 MERAKIAPI | 400d1de3f36caed4bdb91b7cbaba1950f0d7827d | 
-PSK | Format | Preshared key for IPSec Tunnel
+PSK | VH19rDeWT_wne543217nx3mri8g4sv6Q | Preshared key for IPSec Tunnel
 RTID | rtb-fb6f1234 | AWS Route Table ID
 
 ## header 2
