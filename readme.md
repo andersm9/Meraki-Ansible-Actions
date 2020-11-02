@@ -1,18 +1,18 @@
-# Header 1
+# Introduction
 
-Some text
+This project provides a simple example of using tools traditinally used for software development and applying them in the context of networking. The objective is to provide an environment where changes can be made across your IT environment in an agile manner, where your network’s configuration operational status is automatically evaluated.
 
-The script shall:
+This project uses the following tools:
 
-* bullet one
-* bullet two
+* Github Actions
+* Ansible
+* Meraki MX Appliance
+* AWS EC2 instance
 
 
-some more texst
-
-# Another Header 1
-## header 2
-header 2 text
+# Tools overview
+## Github Actions
+GitHub Actions help you automate tasks within your development life cycle. GitHub Actions are event-driven, meaning that you can run a series of commands after a specified event has occurred. In this project, we'll be triggering Actions when somebody pushes an update to our configuration files ("config.yaml" or "playbook.yml"). This event will trigger the actions defined in ".github/workflows/main.yml"
 
 ## header 2
 list item 1
