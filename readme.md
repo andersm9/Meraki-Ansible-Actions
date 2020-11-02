@@ -25,11 +25,11 @@ GitHub Actions help you automate tasks within your development life cycle. GitHu
 * lints our ansible playbook - checks playbooks for practices and behavior that could potentially be improved
 * executes the bash script defined at sh ./scripts/entrypoint.sh. It also passes to the script a number of "secrets" - these are defined under the repo Settings -> Secrets
 ### Bash Script
-* the script defined at ./scripts/entrypoint.sh sets up our runner's server enviroinment - installing the AWS Python SDK (boto3/botocore). Once this has completed it launches our Ansible Playbook ('playbook.yml'), and passes it the environment variables that we passed above.
-* Our Ansibel Playbook walks through a number of steps that gathers configuration information from both the Meraki and AW EC2 environments (via PAI calls to both services), and uses this information to create an IPSec tunnel from a Meraki MX appliance, to an AWS Virtual Gateway. This includes creating the relevant routing at both ends, and creating a firewall configuration at the Meraki side, the rules for which are defined in "playbooks/config.yaml"
+* the script defined at ./scripts/entrypoint.sh sets up our runner's server enviroinment - installing the AWS Python SDK (boto3/botocore). Once this has completed it launces our Ansible Playbook ('playbook.yml'), and passes it the environment variables that we passed above.
+* Our Ansible Playbook walks through a number of steps that gathers configuration information from both the Meraki and AWS EC2 environments (via API calls to both services), and uses this information to create an IPSec tunnel from a Meraki MX appliance, to an AWS Virtual Gateway. This includes creating the relevant routing at both ends, and creating a firewall configuration at the Meraki side, the rules for which are defined in "playbooks/config.yaml"
 ### Connectivity test
-* At this point we should have connectivity from our MX Appliance to the AWS EC2 instance. We can carry out a simple connectivoty test by launcing a ling from our ECS instance to the public IP of the MX appliance. This uses the AWS Systems Manager Agent (SSM Agent). After a short pause for the command to execute, we use SSM again to recover the result.
-* All steps above can be monitored using the 'Actions' The image below shows a successful ping to the external MX address at the "aws ssm get-command-invocation" job:
+* At this point we should have connectivity from our MX Appliance to the AWS EC2 instance. We can carry out a simple connectivoty test by launcing a ping from our EC2 instance to the public IP of the MX appliance. This uses the AWS Systems Manager Agent (SSM Agent). After a short pause for the command to execute, we use SSM again to recover the result.
+* All steps above can be monitored using the 'Actions' tab. The image below shows a successful ping to the external MX address at the "aws ssm get-command-invocation" job:
 ![Diagram](Images/Actions.png)
 
 
@@ -58,9 +58,9 @@ RTID | rtb-fb6f1234 | AWS Route Table ID
 
 
 ### Meraki
-Any MX Security Appliance
-Instructions for generating a Meraki Dashboard API key:
-https://developer.cisco.com/meraki/build/meraki-postman-collection-getting-started/
+* Any MX Security Appliance.
+* Instructions for generating a Meraki Dashboard API key:
+* https://developer.cisco.com/meraki/build/meraki-postman-collection-getting-started/
 
 ### Amazon Web Services
 Single EC2 instance running, with SSM agent installed. SSM comes preinstalled in some Amazon Machine Images
