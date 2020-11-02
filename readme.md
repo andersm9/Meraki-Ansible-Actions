@@ -18,10 +18,10 @@ The project shall configure IPSec based connectivty between a Meraki MX applianc
 The key reasons to control networks in this manner is to enable:
 * Automate testing such as syntax checking / linting
 * Tracking
-  * Who made changes
+  * Who made changes and when
   * Differences in configurations
   * State at points in time
-* Roll Back failed changes
+* Rollback failed changes
 
 # Tools overview
 ## Github Actions
