@@ -1,6 +1,6 @@
 # Introduction
 
-This project provides a simple example of using tools traditinally used for software development and applying them in the context of networking. The objective is to provide an environment where changes can be made across your IT environment in an agile manner, where your network’s configuration operational status is automatically evaluated.
+This project provides a simple example of using tools traditinally used for software development and applying them in the context of networking. The objective is to provide an environment where changes can be made across your IT environment in an agile manner, where your network’s configuration changes operational status is automatically evaluated and changes orechestrated between various networking and software componants.
 
 This project uses the following tools:
 
@@ -8,6 +8,12 @@ This project uses the following tools:
 * Ansible
 * Meraki MX Appliance
 * AWS EC2 instance
+
+The project shall configure IPSec based connectivty between a Meraki MX appliance and an Amazon EC2 instance. The connectivoty shall be firewalled at the MX end, the configuration of which shall be controlled as part of the repo - any changes to the repo shall automatically 
+
+* lint the repo
+* push the configuration changes out
+* carry out a simple connectivity test using ping
 
 
 # Tools overview
