@@ -39,10 +39,6 @@ GitHub Actions help you automate tasks within your development life cycle. GitHu
 * All steps above can be monitored using the 'Actions' tab. The image below shows a successful ping to the external MX address at the "aws ssm get-command-invocation" job:
 ![Diagram](Images/Actions.png)
 
-
-## Workflow
-![Diagram](Images/Workflow.png)
-
 # Secrets
 Confidential details such as API keys should be passed to your Actions Workflow via the 'Secrets' function. This is accessible via Settings->Secrets and should be configured as follows:
 
