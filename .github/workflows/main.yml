@@ -22,8 +22,9 @@ jobs:
       with:
         targets: |
            playbooks/playbook.yml
-        
-    - shell: bash
+
+    - name: Launch Script
+      shell: bash
       env:
         MERAKI_API_KEY: ${{ secrets.MERAKIAPI }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
