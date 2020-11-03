@@ -9,7 +9,7 @@ This project uses the following tools:
 * Meraki MX Appliance
 * AWS EC2 instance
 
-The project shall configure IPSec based connectivty between a Meraki MX appliance and an Amazon EC2 instance (via an AWS Virtual Gateway in the VPC). The connectivity shall be firewalled at the MX end, the configuration of which shall be controlled as part of the repo  - changes to the repo (specifically, the "config.yml" and "playbook.yaml" files) shall automatically trigger the following Github Actions:
+The project shall configure IPSec based connectivty between a Meraki MX appliance and an Amazon EC2 instance (via an AWS Virtual Gateway in the VPC). The connectivity shall be firewalled at the MX end, the configuration of which shall be controlled as part of the repo. Changes to the repo (specifically, the "config.yml" and "playbook.yaml" files) shall automatically trigger the following Github Actions:
 
 * lint the repo
 * push the configuration changes out
@@ -63,14 +63,11 @@ RTID | rtb-fb6f1234 | AWS Route Table ID
 
 ### Meraki
 * Any MX Security Appliance.
-* Instructions for generating a Meraki Dashboard API key:
-* https://developer.cisco.com/meraki/build/meraki-postman-collection-getting-started/
+* Instructions for generating a Meraki Dashboard API key: https://developer.cisco.com/meraki/build/meraki-postman-collection-getting-started/
 
 ### Amazon Web Services
-* Single EC2 instance running, with SSM agent installed. SSM comes preinstalled in some Amazon Machine Images
-* https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
-* AWS Access Key and Secret Access Key
-* https://aws.amazon.com/blogs/security/how-to-find-update-access-keys-password-mfa-aws-management-console/
+* Single EC2 instance running, with SSM agent installed. SSM comes preinstalled in some Amazon Machine Images https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
+* AWS Access Key and Secret Access Key: https://aws.amazon.com/blogs/security/how-to-find-update-access-keys-password-mfa-aws-management-console/
 
 * INSTANCE_IDS, AWS_GATEWAY_ID, AWS_REGION and RTID can be found in the EC2 and VPC Service sections
 
