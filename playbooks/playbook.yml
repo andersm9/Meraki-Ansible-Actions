@@ -22,7 +22,7 @@
     - name: include variables for devices
       include_vars:
         file: config.yaml
-        
+
 # Meraki information gathering
 
     - name: GET The MX UPLINK Public IP
