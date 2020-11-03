@@ -9,7 +9,7 @@ This project uses the following tools:
 * Meraki MX Appliance
 * AWS EC2 instance
 
-The project shall configure IPSec based connectivty between a Meraki MX appliance and an Amazon EC2 instance (via an AWS Virtual Gateway in the VPC). The connectivity shall be firewalled at the MX end, the configuration of which shall be controlled as part of the repo - any changes to the repo shall automatically trigger the following Github Actions:
+The project shall configure IPSec based connectivty between a Meraki MX appliance and an Amazon EC2 instance (via an AWS Virtual Gateway in the VPC). The connectivity shall be firewalled at the MX end, the configuration of which shall be controlled as part of the repo  - changes to the repo (specifically, the "config.yml" and "playbook.yaml" files) shall automatically trigger the following Github Actions:
 
 * lint the repo
 * push the configuration changes out
@@ -22,6 +22,7 @@ The key reasons to control networks in this manner is to enable:
   * Differences in configurations
   * State at points in time
 * Rollback failed changes
+* Integrate the control of software changes with the control of the network upon which they rely
 
 # Tools overview
 ## Github Actions
