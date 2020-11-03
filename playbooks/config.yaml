@@ -1,5 +1,4 @@
 VPNNAME: MXtoAWS2
-#PINGIP: 172.31.26.184
 # two third pary firewall rules are defined below
 # rule 1
 comment1: "Deny HTTPS Traffic"
@@ -17,4 +16,3 @@ protocol2: icmp
 destCidr2: Any
 srcCidr2: Any
 syslogEnabled2: false
-#region: eu-west-1
