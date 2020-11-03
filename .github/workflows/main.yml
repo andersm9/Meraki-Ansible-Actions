@@ -1,4 +1,4 @@
-name: CICD  # feel free to pick your own name
+name: CICD  # or pick your own name
 
 on:
   push:
@@ -34,7 +34,7 @@ jobs:
         RTID: ${{ secrets.RTID }}
       run: sh ./scripts/entrypoint.sh
   
-    - name: Execute ping (Using AWS SSM Send-Command)
+    - name: Execute ping (Using AWS SSM Send-Command) to MX public IP
       uses: peterkimzz/aws-ssm-send-command@master
       id: ssm
       with:
