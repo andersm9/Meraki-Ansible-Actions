@@ -53,7 +53,9 @@ The secrets are updated as shown below, in this example the Meraki API key.
 
 ![Diagram](Images/Secrets2.png)
 
-Once the Secrets are configured, they are passed to our workflow and into our Ansible Playbook via environment variables
+Once the Secrets are configured, they are passed to our workflow and into our Ansible Playbook via environment variables. The following extract from "main.yml" shows the secrets being passed to "entrypoint.sh" as environement variables:
+
+![Diagram](Images/envar.png)
 
 The format of the secrets is as follows:
 
