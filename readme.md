@@ -58,7 +58,11 @@ Once the Secrets are configured, they are passed to our workflow and into our An
 ![Diagram](Images/envar.png)
 
 Within "entrypoint.sh", the secrets are futher passed to ansible as we launch the playbook, with the following command:
+
     ansible-playbook playbook.yml --extra-vars "MERAKI_API_KEY=$MERAKI_API_KEY AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY PSK=$PSK RTID=$RTID AWS_REGION=$AWS_REGION AWS_GATEWAY_ID=$AWS_GATEWAY_ID"
+
+    $virtualenv venv
+
 
 The format of the secrets is as follows:
 
