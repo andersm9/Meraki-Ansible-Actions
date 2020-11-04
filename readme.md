@@ -82,6 +82,12 @@ RTID | rtb-fb6f1234 | AWS Route Table ID
 * Any MX Security Appliance.
 * Instructions for generating a Meraki Dashboard API key: https://developer.cisco.com/meraki/build/meraki-postman-collection-getting-started/
 
+Open your Meraki dashboard: https://dashboard.meraki.com
+Once logged in, navigate to the Organization Settings menu.
+Ensure that the API Access is set to “Enable access to the Cisco Meraki Dashboard API”
+
+![Diagram](Images/api.png)
+
 ### Amazon Web Services
 * Single EC2 instance running, with SSM agent installed. SSM comes preinstalled in some Amazon Machine Images https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
 SSM is automatically installed when launching an Ubuntu server:
