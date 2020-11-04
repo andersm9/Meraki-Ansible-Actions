@@ -94,14 +94,14 @@ SSM is automatically installed when launching an Ubuntu server:
 
 ![Diagram](Images/ubuntu.png)
 
-* AWS Access Key and Secret Access Key can be found bt signing into your AWS console as an IAM user, then navigate to your user name in the upper right section of the navigation bar. From the drop-down menu, select My Security Credentials, as shown in Figure: https://aws.amazon.com/blogs/security/how-to-find-update-access-keys-password-mfa-aws-management-console/
+* AWS Access Key and Secret Access Key can be found by signing into your AWS console as an IAM user, then navigate to your user name in the upper right section of the navigation bar. From the drop-down menu, select My Security Credentials, as shown in Figure: https://aws.amazon.com/blogs/security/how-to-find-update-access-keys-password-mfa-aws-management-console/
 
 ![Diagram](Images/awscred.png)
 
 AWS_REGION is selected at the top right hand side. In the screenshot above this is selected as 'Ohio', which translates to 'us-east-2' in the drop down menu. EC2/VPCs using the 'Ohio' region should populate AWS_REGION with 'us-east-2'.
 
 * INSTANCE_IDS
-The EC2 instance ID is found under the 'EC2->Instances" menu:
+is the EC2 instance ID, found under the 'EC2->Instances" menu:
 
 ![Diagram](Images/EC2.png)
 
