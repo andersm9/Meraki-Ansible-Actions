@@ -84,7 +84,9 @@ RTID | rtb-fb6f1234 | AWS Route Table ID
 
 ### Amazon Web Services
 * Single EC2 instance running, with SSM agent installed. SSM comes preinstalled in some Amazon Machine Images https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
-* AWS Access Key and Secret Access Key: https://aws.amazon.com/blogs/security/how-to-find-update-access-keys-password-mfa-aws-management-console/
+* AWS Access Key and Secret Access Key can be found bt signing into your AWS console as an IAM user, then navigate to your user name in the upper right section of the navigation bar. From the drop-down menu, select My Security Credentials, as shown in Figure: https://aws.amazon.com/blogs/security/how-to-find-update-access-keys-password-mfa-aws-management-console/
+
+![Diagram](Images/awscred.png)
 
 * INSTANCE_IDS, AWS_GATEWAY_ID, AWS_REGION and RTID can be found in the EC2 and VPC Service sections
 
