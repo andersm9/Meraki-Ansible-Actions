@@ -88,7 +88,14 @@ RTID | rtb-fb6f1234 | AWS Route Table ID
 
 ![Diagram](Images/awscred.png)
 
-* INSTANCE_IDS, AWS_GATEWAY_ID, AWS_REGION and RTID can be found in the EC2 and VPC Service sections
+AWS_REGION is selected at the top right hand side. In the screenshot above this is selected as 'Ohio', which translates to 'us-east-2' in the drop down menu. EC2/VPCs using the 'Ohio' region should populate AWS_REGION with 'us-east-2'.
+
+* INSTANCE_IDS
+The EC2 instance ID is found under the 'EC2->Instances" menu:
+
+![Diagram](Images/EC2.png)
+
+* AWS_GATEWAY_ID and RTID can be found in the EC2 and VPC Service sections
 
 ### Other
 * PSK - the Preshared key used in the IPSec Tunnel can be generated at random.
