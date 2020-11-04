@@ -49,6 +49,12 @@ Confidential details such as API keys should be passed to your Actions Workflow 
 
 ![Diagram](Images/Secrets.png)
 
+The secrets are updated as shown below, in this example the Meraki API key.
+
+![Diagram](Images/Secrets2.png)
+
+Once the Secrets are configured, they are passed to our workflow and into our Ansible Playbook via environment variables
+
 The format of the secrets is as follows:
 
 Secret| Format | notes
