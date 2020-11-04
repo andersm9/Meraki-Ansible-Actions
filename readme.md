@@ -95,7 +95,9 @@ The EC2 instance ID is found under the 'EC2->Instances" menu:
 
 ![Diagram](Images/EC2.png)
 
-* AWS_GATEWAY_ID and RTID can be found in the EC2 and VPC Service sections
+* AWS_GATEWAY_ID (="Internet Gateway") and RTID (=Route Table ID") can be found in the VPC Service section
+
+![Diagram](Images/VPC.png)
 
 ### Other
 * PSK - the Preshared key used in the IPSec Tunnel can be generated at random.
