@@ -44,6 +44,12 @@ GitHub Actions help you automate tasks within your development life cycle. GitHu
 
 To use this workflow, simply fork this repo and configure for your own environment using the "config.yml" file and the Secrets (described below).
 
+# Operation
+
+The high level operation of the Github Actions are described in the diagram below:
+
+![Diagram](Images/HighLevel.png)
+
 ## Secrets
 Confidential details such as API keys should be passed to your Actions Workflow via the 'Secrets' function. This is accessible via Settings->Secrets and should be configured as follows:
 
