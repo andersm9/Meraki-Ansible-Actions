@@ -81,11 +81,16 @@ MERAKIAPI | 400d1de3f36caed4bdb91b7cbaba1950f0d7827d | Meraki Dashboard API key
 PSK | VH19rDeWT_wne543217nx3mri8g4sv6Q | Preshared key for IPSec Tunnel
 RTID | rtb-fb6f1234 | AWS Route Table ID
 
-## Requirements
-
+## Requirements and Assumptions
 
 ### Meraki
+#### Assumptions
+The solution has been tested with a simple Meraki network consisting of:
 * Any MX Security Appliance.
+* A single MX appliance
+* A single uplink to the Internnet
+* A single local subnet
+#### API Key
 * Instructions for generating a Meraki Dashboard API key: https://developer.cisco.com/meraki/build/meraki-postman-collection-getting-started/
 
 Open your Meraki dashboard: https://dashboard.meraki.com
@@ -95,11 +100,18 @@ Ensure that the API Access is set to “Enable access to the Cisco Meraki Dashbo
 ![Diagram](Images/api.png)
 
 ### Amazon Web Services
+#### Assumptions
+It is assumed that the AWS serivce is a simple on with:
+* Single VPC
+* Single Route Table
+* Single Virtual Gatewy
+* Security Group used permits ICMP traffic
 * Single EC2 instance running, with SSM agent installed. SSM comes preinstalled in some Amazon Machine Images https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
 SSM is automatically installed when launching an Ubuntu server:
 
 ![Diagram](Images/ubuntu.png)
 
+#### API Key and configuration details
 * AWS Access Key and Secret Access Key can be found by signing into your AWS console as an IAM user, then navigate to your user name in the upper right section of the navigation bar. From the drop-down menu, select My Security Credentials, as shown in Figure: https://aws.amazon.com/blogs/security/how-to-find-update-access-keys-password-mfa-aws-management-console/
 
 ![Diagram](Images/awscred.png)
@@ -117,8 +129,3 @@ is the EC2 instance ID, found under the 'EC2->Instances" menu:
 
 ### Other
 * PSK - the Preshared key used in the IPSec Tunnel can be generated at random.
-
-# Assumptions
-
-
- 
