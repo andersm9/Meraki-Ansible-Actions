@@ -118,5 +118,7 @@ is the EC2 instance ID, found under the 'EC2->Instances" menu:
 ### Other
 * PSK - the Preshared key used in the IPSec Tunnel can be generated at random.
 
+# Assumptions
+
 
  
