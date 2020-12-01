@@ -8,7 +8,7 @@
     aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
     aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
     aws_gateway_id : "{{ AWS_GATEWAY_ID }}"
-    region: "{{ AWS_REGION }}"
+    region: eu-west-3
     PSK: "{{ PSK }}"
     RTID: "{{ RTID }}"
 
