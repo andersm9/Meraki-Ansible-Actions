@@ -59,7 +59,7 @@
       register: vpc_ids
 
     - debug:
-        msg: "{{ vpc_ids }}"
+        #msg: "{{ vpc_ids }}"
         msg: "{{ region }}"
 
     - name: Create a new vgw attached to a specific VPC
