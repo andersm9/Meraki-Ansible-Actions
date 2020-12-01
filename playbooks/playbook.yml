@@ -55,7 +55,7 @@
 
     - name: GET AWS Network info
       ec2_vpc_net_info:
-        region: eu-west-1
+        region: "{{ region }}"
       register: vpc_ids
 
     - debug:
@@ -64,7 +64,7 @@
     - name: Create a new vgw attached to a specific VPC
       ec2_vpc_vgw:
         state: present
-        region: "{{ region }}"
+        region: "{{ region }} "
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
         name: Ansible-VGW
         type: ipsec.1
@@ -76,7 +76,7 @@
     - name: Propagate routes from the newly created VGW
       ec2_vpc_route_table:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
-        region: "{{ AWS_REGION }}"
+        region: "{{ region }}"
         route_table_id: "{{ RTID }}"
         state: present
         lookup: id
@@ -93,7 +93,7 @@
     - name: Identify the VPC IGW
       ec2_vpc_igw:
         vpc_id: "{{ vpc_ids.vpcs.0.vpc_id }}"
-        region: "{{ AWS_REGION }}"
+        region: "{{ region }}"
         state: present
       register: igw
 
@@ -105,7 +105,7 @@
         bgp_asn: 12345
         ip_address: "{{ meraki_uplink.json.1.uplinks.0.publicIp }}"
         name: Ansible_Meraki_MX
-        region: "{{ AWS_REGION }}"
+        region: "{{ region }}"
       register: cgw
 
     - debug:
@@ -119,7 +119,7 @@
       ec2_vpc_vpn:
         state: present
         static_only: true
-        region: "{{ AWS_REGION }}"
+        region: "{{ region }}"
         vpn_gateway_id: "{{ created_vgw.vgw.id }}"
         customer_gateway_id: "{{ cgw.gateway.customer_gateway.customer_gateway_id }}"
         tunnel_options:
