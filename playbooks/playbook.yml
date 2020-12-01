@@ -55,12 +55,12 @@
 
     - name: GET AWS Network info
       ec2_vpc_net_info:
-        region: "{{ AWS_REGION }}"
+        region: "{{ region }}"
       register: vpc_ids
 
     - debug:
         msg: "{{ vpc_ids }}"
-        msg: "{{ AWS_REGION }}"
+        msg: "{{ region }}"
 
     - name: Create a new vgw attached to a specific VPC
       ec2_vpc_vgw:
