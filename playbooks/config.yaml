@@ -1,8 +1,8 @@
 VPNNAME: MXtoAWS2
 # two third pary firewall rules are defined below
 # rule 1
-comment1: "Deny HTTPS Traffic"
-policy1: deny
+comment1: "allow HTTPS Traffic"
+policy1: allow
 protocol1: tcp
 destPort1: 443
 destCidr1: Any
